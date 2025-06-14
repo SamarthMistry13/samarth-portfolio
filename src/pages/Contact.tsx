@@ -62,7 +62,7 @@ const Contact = () => {
             </div>
             <div className="flex items-center gap-3">
               <Linkedin className="text-primary" size={20} />
-              <a href="https://linkedin.com/in/samarth-mistry" target="_blank" rel="noopener noreferrer" className="hover:underline">linkedin.com/in/samarth-mistry13</a>
+              <a href="https://www.linkedin.com/in/samarth-mistry13/" target="_blank" rel="noopener noreferrer" className="hover:underline">linkedin.com/in/samarth-mistry13</a>
             </div>
             <div className="flex items-center gap-3">
               <Download className="text-primary" size={20} />
