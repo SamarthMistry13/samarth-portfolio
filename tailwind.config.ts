@@ -50,7 +50,7 @@ export default {
           foreground: 'hsl(var(--muted-foreground))'
         },
         accent: {
-          DEFAULT: '#ec4899', // Pink
+          DEFAULT: '#14b8a6', // Teal
           foreground: '#f9fafb', // Soft white
         },
         popover: {
