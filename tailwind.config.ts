@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -23,48 +24,48 @@ export default {
         display: ['Playfair Display', 'serif'],
       },
       colors: {
-        border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))',
-        background: '#18181b', // slightly lighter dark background
-        foreground: 'hsl(var(--foreground))',
+        border: '#003135',
+        input: '#024950',
+        ring: '#0FA4AF',
+        background: '#003135', // deep teal
+        foreground: '#AFDDE5', // pale cyan for text-foreground
         primary: {
-          DEFAULT: '#2563eb', // Blue
-          foreground: 'hsl(var(--primary-foreground))'
+          DEFAULT: '#024950', // teal
+          foreground: '#AFDDE5', // use pale cyan for on-primary
         },
         card: {
-          DEFAULT: '#23272f', // Slate
-          foreground: 'hsl(var(--card-foreground))'
+          DEFAULT: '#024950', // teal (matching primary)
+          foreground: '#AFDDE5'
         },
         secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))'
+          DEFAULT: '#AFDDE5', // pale cyan
+          foreground: '#003135', // for on-secondary
         },
         destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))'
+          DEFAULT: '#964734', // brick orange
+          foreground: '#AFDDE5'
         },
         muted: {
-          DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))'
+          DEFAULT: '#AFDDE5',
+          foreground: '#024950'
         },
         accent: {
-          DEFAULT: '#14b8a6', // Teal
-          foreground: '#f9fafb', // Soft white
+          DEFAULT: '#0FA4AF', // vivid cyan
+          foreground: '#003135', // deep teal text on accent
         },
         popover: {
-          DEFAULT: 'hsl(var(--popover))',
-          foreground: 'hsl(var(--popover-foreground))'
+          DEFAULT: '#AFDDE5',
+          foreground: '#003135'
         },
         sidebar: {
-          DEFAULT: 'hsl(var(--sidebar-background))',
-          foreground: 'hsl(var(--sidebar-foreground))',
-          primary: 'hsl(var(--sidebar-primary))',
-          'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-          accent: 'hsl(var(--sidebar-accent))',
-          'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-          border: 'hsl(var(--sidebar-border))',
-          ring: 'hsl(var(--sidebar-ring))'
+          DEFAULT: '#003135',
+          foreground: '#AFDDE5',
+          primary: '#024950',
+          'primary-foreground': '#AFDDE5',
+          accent: '#0FA4AF',
+          'accent-foreground': '#003135',
+          border: '#024950',
+          ring: '#0FA4AF'
         }
       },
       borderRadius: {
@@ -90,3 +91,4 @@ export default {
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+
