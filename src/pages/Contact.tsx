@@ -2,21 +2,53 @@
 import NavBar from "../components/NavBar";
 import { Mail, Linkedin, Download, Phone } from "lucide-react";
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
+import { toast } from "@/components/ui/use-toast";
+
+const EMAILJS_SERVICE_ID = "service_gpca5z7";
+const EMAILJS_TEMPLATE_ID = "template_su6ynmg";
+const EMAILJS_PUBLIC_KEY = "_O-2MQUN2USiHJs96";
 
 const defaultForm = { name: "", email: "", message: "" };
 
 const Contact = () => {
   const [form, setForm] = useState(defaultForm);
-  const [sent, setSent] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
     setForm({ ...form, [e.target.name]: e.target.value });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSent(true); // In extension, add backend/email logic here.
-    setForm(defaultForm);
-    setTimeout(() => setSent(false), 5000);
+    setIsLoading(true);
+
+    const templateParams = {
+      from_name: form.name,
+      from_email: form.email,
+      message: form.message,
+    };
+
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
+      );
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
+      });
+      setForm(defaultForm);
+    } catch (error) {
+      toast({
+        title: "Error sending message",
+        description: "Something went wrong. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -65,6 +97,7 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               required
+              disabled={isLoading}
             />
             <input
               className="px-4 py-3 rounded-lg bg-[#232a3f] border-none text-white placeholder:text-gray-400 outline-primary"
@@ -74,6 +107,7 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               required
+              disabled={isLoading}
             />
             <textarea
               className="px-4 py-3 rounded-lg bg-[#232a3f] border-none text-white placeholder:text-gray-400 outline-primary min-h-[120px]"
@@ -82,13 +116,14 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               required
+              disabled={isLoading}
             />
             <button
-              className="w-full mt-2 bg-primary text-[#16202a] py-3 rounded-lg font-semibold text-lg hover:bg-accent transition-colors"
+              className={`w-full mt-2 bg-primary text-[#16202a] py-3 rounded-lg font-semibold text-lg hover:bg-accent transition-colors ${isLoading ? "opacity-60 cursor-not-allowed" : ""}`}
               type="submit"
-              disabled={sent}
+              disabled={isLoading}
             >
-              {sent ? "Message Sent!" : "Send Message"}
+              {isLoading ? "Sending..." : "Send Message"}
             </button>
           </form>
         </section>
