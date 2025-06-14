@@ -3,9 +3,9 @@ import React from "react";
 
 const ProfileImage = ({ className = "" }: { className?: string }) => (
   <div className={`rounded-full border-4 border-primary shadow-xl overflow-hidden ${className}`}>
-    {/* Placeholder headshot image */}
+    {/* User-provided headshot image */}
     <img
-      src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=facearea&w=320&h=320&facepad=2&q=80"
+      src="https://i.ibb.co/yckCsX50/profile.jpg"
       alt="Samarth Mistry profile"
       className="w-full h-full object-cover"
       width={160}
