@@ -24,48 +24,48 @@ export default {
         display: ['Playfair Display', 'serif'],
       },
       colors: {
-        border: '#003135',
-        input: '#024950',
-        ring: '#0FA4AF',
-        background: '#003135', // deep teal
-        foreground: '#AFDDE5', // pale cyan for text-foreground
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
+        background: '#18181b', // slightly lighter dark background
+        foreground: 'hsl(var(--foreground))',
         primary: {
-          DEFAULT: '#024950', // teal
-          foreground: '#AFDDE5', // use pale cyan for on-primary
+          DEFAULT: '#2563eb', // Blue
+          foreground: 'hsl(var(--primary-foreground))'
         },
         card: {
-          DEFAULT: '#024950', // teal (matching primary)
-          foreground: '#AFDDE5'
+          DEFAULT: '#23272f', // Slate
+          foreground: 'hsl(var(--card-foreground))'
         },
         secondary: {
-          DEFAULT: '#AFDDE5', // pale cyan
-          foreground: '#003135', // for on-secondary
+          DEFAULT: 'hsl(var(--secondary))',
+          foreground: 'hsl(var(--secondary-foreground))'
         },
         destructive: {
-          DEFAULT: '#964734', // brick orange
-          foreground: '#AFDDE5'
+          DEFAULT: 'hsl(var(--destructive))',
+          foreground: 'hsl(var(--destructive-foreground))'
         },
         muted: {
-          DEFAULT: '#AFDDE5',
-          foreground: '#024950'
+          DEFAULT: 'hsl(var(--muted))',
+          foreground: 'hsl(var(--muted-foreground))'
         },
         accent: {
-          DEFAULT: '#0FA4AF', // vivid cyan
-          foreground: '#003135', // deep teal text on accent
+          DEFAULT: '#14b8a6', // Teal
+          foreground: '#f9fafb', // Soft white
         },
         popover: {
-          DEFAULT: '#AFDDE5',
-          foreground: '#003135'
+          DEFAULT: 'hsl(var(--popover))',
+          foreground: 'hsl(var(--popover-foreground))'
         },
         sidebar: {
-          DEFAULT: '#003135',
-          foreground: '#AFDDE5',
-          primary: '#024950',
-          'primary-foreground': '#AFDDE5',
-          accent: '#0FA4AF',
-          'accent-foreground': '#003135',
-          border: '#024950',
-          ring: '#0FA4AF'
+          DEFAULT: 'hsl(var(--sidebar-background))',
+          foreground: 'hsl(var(--sidebar-foreground))',
+          primary: 'hsl(var(--sidebar-primary))',
+          'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
+          accent: 'hsl(var(--sidebar-accent))',
+          'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
+          border: 'hsl(var(--sidebar-border))',
+          ring: 'hsl(var(--sidebar-ring))'
         }
       },
       borderRadius: {
