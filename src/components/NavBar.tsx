@@ -33,9 +33,10 @@ const NavBar = () => (
           </NavLink>
         ))}
         <a
-          href="/samarth-mistry-resume.pdf"
+          href="https://drive.google.com/file/d/1hUEBlTA1EIQMWYAE-EpklCK2F9EFWO3B/view?usp=sharing"
           className="ml-4 inline-flex items-center px-5 py-2 font-semibold rounded-xl bg-primary text-[#16202a] hover:bg-accent transition-colors animate-scale-in shadow-lg"
-          download
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <Download size={18} className="mr-2" />
           Download Resume
