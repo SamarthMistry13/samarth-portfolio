@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -30,7 +29,7 @@ export default {
         background: '#18181b', // slightly lighter dark background
         foreground: 'hsl(var(--foreground))',
         primary: {
-          DEFAULT: '#6366f1', // Indigo
+          DEFAULT: '#2563eb', // Blue
           foreground: 'hsl(var(--primary-foreground))'
         },
         card: {
@@ -91,4 +90,3 @@ export default {
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
-
