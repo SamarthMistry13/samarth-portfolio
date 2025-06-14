@@ -1,4 +1,3 @@
-
 import NavBar from "../components/NavBar";
 import ProjectCard from "../components/ProjectCard";
 import React from "react";
@@ -23,7 +22,7 @@ const projects = [
     description:
       "Stylized top-down game with coin collection, player animation, sound, enemy AI, and sliding mechanic.",
     image: "/lovable-uploads/e61a9389-08f8-4e45-9158-0b8c7ebad45d.png",
-    tags: ["Simulation", "Blueprint", "Top-down", "Gameplay"],
+    tags: ["Blueprint", "Top-down", "Gameplay"],
   },
 ];
 
