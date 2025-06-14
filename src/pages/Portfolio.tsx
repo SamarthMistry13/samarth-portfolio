@@ -15,7 +15,7 @@ const projects = [
     title: "Third-Person Shooter Prototype",
     description:
       "Fast-paced shooter demo with player movement, shooting mechanics. Scoreboard, timer, Victory screen, and Restart button.",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80",
+    image: "/lovable-uploads/f22129ae-1956-4cd4-9d8e-61b9e0756d4a.png",
     tags: ["Prototype", "Shooter", "Blueprint", "Gameplay"],
   },
   {
