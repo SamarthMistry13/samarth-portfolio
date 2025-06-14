@@ -8,7 +8,7 @@ const projects = [
     title: "Castle Environment (UE5)",
     description:
       "Environment design using modular assets, terrain sculpting, and foliage. Optimized lighting and assets for clarity.",
-    image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&w=600&q=80",
+    image: "/lovable-uploads/33d6b50a-2368-4524-ba86-f9530cf4a963.png",
     tags: ["UE5", "Environment Art", "Modular Assets"],
   },
   {
