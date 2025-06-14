@@ -1,3 +1,4 @@
+
 import NavBar from "../components/NavBar";
 import { Mail, Linkedin, Download, Phone } from "lucide-react";
 import React, { useState } from "react";
@@ -65,7 +66,12 @@ const Contact = () => {
             </div>
             <div className="flex items-center gap-3">
               <Download className="text-primary" size={20} />
-              <a href="/samarth-mistry-resume.pdf" download className="hover:underline">
+              <a
+                href="https://drive.google.com/file/d/1hUEBlTA1EIQMWYAE-EpklCK2F9EFWO3B/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
                 Download Resume
               </a>
             </div>
