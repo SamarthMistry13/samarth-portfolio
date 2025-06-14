@@ -1,9 +1,6 @@
-
 import NavBar from "../components/NavBar";
 import React from "react";
-
-const About = () => (
-  <div className="min-h-screen bg-[#0f172a] font-sans text-white">
+const About = () => <div className="min-h-screen bg-[#0f172a] font-sans text-white">
     <NavBar />
     <main className="pt-28 pb-14 container max-w-3xl mx-auto px-4 animate-fade-in">
       <section className="bg-card rounded-3xl shadow-xl p-8 relative">
@@ -17,7 +14,7 @@ const About = () => (
             <h3 className="font-semibold text-xl mb-3 text-accent">Education</h3>
             <ul className="list-disc list-inside space-y-2 text-white/90">
               <li>Completed 12th grade</li>
-              <li>Pursuing B.Tech (details can be updated as progress continues)</li>
+              <li>Pursuing B.Tech </li>
             </ul>
           </div>
           <div className="flex-1">
@@ -33,7 +30,5 @@ const About = () => (
         </div>
       </section>
     </main>
-  </div>
-);
-
+  </div>;
 export default About;
