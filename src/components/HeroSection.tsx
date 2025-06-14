@@ -1,4 +1,3 @@
-
 import React from "react";
 import ProfileImage from "./ProfileImage";
 import { Link } from "react-router-dom";
@@ -15,7 +14,7 @@ const HeroSection = () => (
         </span>
       </h1>
       <p className="max-w-prose text-lg text-white/90 mb-8">
-        Passionate about crafting immersive worlds and gameplay experiences. Skilled in <span className="font-semibold text-primary">Unreal Engine 5</span>, <span className="font-semibold text-primary">environment design</span>, gameplay prototyping, and C++/Blueprint scripting.
+        Passionate about crafting immersive worlds and gameplay experiences. Moderately skilled in <span className="font-semibold text-primary">Unreal Engine 5</span>, <span className="font-semibold text-primary">environment design</span>, gameplay prototyping, and C++/Blueprint scripting.
       </p>
       <div className="flex gap-4 items-center mb-6">
         <Link to="/portfolio" className="bg-primary text-[#16202a] px-6 py-2 rounded-full font-semibold text-lg hover:bg-accent transition-colors shadow-lg animate-scale-in duration-300">
