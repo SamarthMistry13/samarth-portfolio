@@ -1,4 +1,3 @@
-
 import NavBar from "../components/NavBar";
 import { Mail, Linkedin, Download, Phone } from "lucide-react";
 import React, { useState } from "react";
@@ -67,7 +66,7 @@ const Contact = () => {
             <div className="flex items-center gap-3">
               <Download className="text-primary" size={20} />
               <a
-                href="https://drive.google.com/file/d/1hUEBlTA1EIQMWYAE-EpklCK2F9EFWO3B/view?usp=sharing"
+                href="https://drive.google.com/file/d/13LUvlfcsxVpfSRIg0tSnVEU4AToX71x5/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline"
