@@ -19,10 +19,10 @@ const projects = [
     tags: ["Prototype", "Shooter", "Blueprint", "Gameplay"],
   },
   {
-    title: "Villager Simulation",
+    title: "Villager Game",
     description:
       "Stylized top-down game with coin collection, player animation, sound, enemy AI, and sliding mechanic.",
-    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=600&q=80",
+    image: "/lovable-uploads/e61a9389-08f8-4e45-9158-0b8c7ebad45d.png",
     tags: ["Simulation", "Blueprint", "Top-down", "Gameplay"],
   },
 ];
