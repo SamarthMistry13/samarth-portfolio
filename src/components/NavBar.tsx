@@ -38,7 +38,7 @@ const NavBar = () => (
           download
         >
           <Download size={18} className="mr-2" />
-          Download CV
+          Download Resume
         </a>
       </div>
     </nav>
