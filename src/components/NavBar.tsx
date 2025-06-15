@@ -1,4 +1,3 @@
-
 import { Link, NavLink } from "react-router-dom";
 import { Download, Book, User, Briefcase, Mail } from "lucide-react";
 import React from "react";
@@ -22,8 +21,8 @@ const NavBar = () => (
           <span>Samarth Mistry</span>
         </Link>
       </div>
-      {/* Resume button below logo on mobile */}
-      <div className="w-full flex justify-center mt-12 md:hidden">
+      {/* REMOVE: Resume button below logo on mobile */}
+      {/* <div className="w-full flex justify-center mt-12 md:hidden">
         <a
           href={RESUME_LINK}
           className="inline-flex items-center px-5 py-2 font-semibold rounded-xl bg-primary text-[#16202a] hover:bg-accent transition-colors shadow-lg text-base whitespace-nowrap"
@@ -33,7 +32,7 @@ const NavBar = () => (
           <Download size={18} className="mr-2" />
           Resume
         </a>
-      </div>
+      </div> */}
       {/* Navlinks stay right; add pl space on md+ for logo */}
       <div className="flex gap-2 sm:gap-6 items-center overflow-x-auto md:overflow-x-visible ml-auto md:ml-0 md:pl-[180px]">
         {navLinks.map(({ path, label, icon: Icon }) => (
@@ -67,4 +66,3 @@ const NavBar = () => (
 );
 
 export default NavBar;
-
