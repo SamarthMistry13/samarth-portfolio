@@ -1,4 +1,3 @@
-
 import React from "react";
 import ProfileImage from "./ProfileImage";
 import { Link } from "react-router-dom";
@@ -7,19 +6,15 @@ import { ArrowDown, Play } from "lucide-react";
 const HeroSection = () => (
   <section className="relative flex flex-col md:flex-row items-center min-h-[60vh] pt-24 pb-8 md:pt-28 md:pb-28 bg-[#181f36] rounded-3xl shadow-2xl overflow-hidden animate-fade-in mx-2 sm:mx-4">
     <div className="relative flex-1 z-10 w-full md:pl-8 md:pr-4 flex flex-col items-center md:items-start px-2 sm:px-4">
-      <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-6xl font-display font-bold text-white leading-tight mb-6 drop-shadow-lg text-center md:text-left">
+      <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-6xl font-display font-bold text-white leading-tight mb-4 md:mb-6 drop-shadow-lg text-center md:text-left">
         Hi, I’m <span className="text-primary">Samarth Mistry</span>
         <br />
         <span className="text-base sm:text-lg md:text-xl font-sans font-semibold text-accent block mt-3">
           Aspiring Game Designer
         </span>
       </h1>
-      <p className="max-w-prose text-sm sm:text-base md:text-lg text-white/90 mb-8 text-center md:text-left leading-relaxed">
-        Passionate about crafting immersive worlds and gameplay experiences.
-        Moderately skilled in <span className="font-semibold text-primary">Unreal Engine 5</span>, <span className="font-semibold text-primary">environment design</span>,
-        gameplay prototyping, and C++/Blueprint scripting.
-      </p>
-      <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-center sm:items-start mb-6 w-full max-w-xs sm:max-w-none mx-auto sm:mx-0">
+      {/* Move scroll actions below heading on mobile, keep old position on md+ */}
+      <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-center sm:items-start mb-4 w-full max-w-xs sm:max-w-none mx-auto sm:mx-0 order-2 md:order-none">
         <Link
           to="/portfolio"
           className="w-full sm:w-fit bg-primary text-[#16202a] px-5 py-2 rounded-full font-semibold text-base sm:text-lg hover:bg-accent transition-colors shadow-lg text-center"
@@ -34,9 +29,14 @@ const HeroSection = () => (
           <ArrowDown size={18} className="animate-bounce" />
         </Link>
       </div>
+      <p className="max-w-prose text-sm sm:text-base md:text-lg text-white/90 mb-6 md:mb-8 text-center md:text-left leading-relaxed">
+        Passionate about crafting immersive worlds and gameplay experiences.
+        Moderately skilled in <span className="font-semibold text-primary">Unreal Engine 5</span>, <span className="font-semibold text-primary">environment design</span>,
+        gameplay prototyping, and C++/Blueprint scripting.
+      </p>
       <a
         href="/contact"
-        className="inline-flex items-center gap-2 text-sm sm:text-base text-accent hover:underline text-center"
+        className="inline-flex items-center gap-2 text-sm sm:text-base text-accent hover:underline text-center mb-0 md:mb-0"
       >
         <Play size={18} />
         Let’s Connect
