@@ -2,6 +2,15 @@ import NavBar from "../components/NavBar";
 import ProjectCard from "../components/ProjectCard";
 import React, { useState } from "react";
 
+// Import carousel components from shadcn/ui
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "../components/ui/carousel";
+
 // Updated Castle Environment project to include images (remove video)
 const projects = [
   {
@@ -48,15 +57,6 @@ const Portfolio = () => {
     setModalImages(null);
     setGalleryIndex(0);
   };
-  const handleImageNav = (direction: "prev" | "next") => {
-    if (!modalImages) return;
-    setGalleryIndex((prev) => {
-      if (direction === "prev") {
-        return prev === 0 ? modalImages.length - 1 : prev - 1;
-      }
-      return prev === modalImages.length - 1 ? 0 : prev + 1;
-    });
-  };
 
   // Show video in modal
   const handleVideoOpen = (url: string) => setVideoUrl(url);
@@ -89,37 +89,42 @@ const Portfolio = () => {
             >
               ✕
             </button>
-            <div className="flex items-center justify-center w-full h-[40vh] md:h-[55vh]">
-              <button
-                onClick={() => handleImageNav("prev")}
-                className="text-3xl px-2 text-white/60 hover:text-accent focus:outline-none"
-                aria-label="Prev image"
+            <div className="w-full max-w-2xl flex flex-col items-center">
+              <Carousel
+                opts={{ loop: true }}
+                className="w-full"
+                setApi={api => {
+                  if (api) {
+                    api.scrollTo(galleryIndex, true, undefined, true);
+                  }
+                }}
               >
-                ‹
-              </button>
-              <img
-                src={modalImages[galleryIndex]}
-                alt={`Portfolio gallery ${galleryIndex + 1}`}
-                className="max-h-[38vh] md:max-h-[52vh] rounded-lg mx-2 shadow-lg object-contain"
-                style={{ maxWidth: "70vw" }}
-              />
-              <button
-                onClick={() => handleImageNav("next")}
-                className="text-3xl px-2 text-white/60 hover:text-accent focus:outline-none"
-                aria-label="Next image"
-              >
-                ›
-              </button>
-            </div>
-            <div className="flex gap-2 justify-center mt-4">
-              {modalImages.map((img, idx) => (
-                <button
-                  key={img}
-                  onClick={() => setGalleryIndex(idx)}
-                  className={`w-3 h-3 rounded-full ${galleryIndex === idx ? 'bg-accent' : 'bg-white/40'}`}
-                  aria-label={`Go to image ${idx + 1}`}
-                />
-              ))}
+                <CarouselContent>
+                  {modalImages.map((img, idx) => (
+                    <CarouselItem key={img} className="flex items-center justify-center">
+                      <img
+                        src={img}
+                        alt={`Portfolio gallery ${idx + 1}`}
+                        className="max-h-[38vh] md:max-h-[52vh] rounded-lg shadow-lg object-contain mx-auto"
+                        style={{ maxWidth: "70vw" }}
+                        draggable={false}
+                      />
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="left-2 top-1/2 -translate-y-1/2" />
+                <CarouselNext className="right-2 top-1/2 -translate-y-1/2" />
+              </Carousel>
+              <div className="flex gap-2 justify-center mt-4">
+                {modalImages.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setGalleryIndex(idx)}
+                    className={`w-3 h-3 rounded-full ${galleryIndex === idx ? 'bg-accent' : 'bg-white/40'}`}
+                    aria-label={`Go to image ${idx + 1}`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
