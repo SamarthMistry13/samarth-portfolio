@@ -8,7 +8,7 @@ const RESUME_LINK = "https://drive.google.com/file/d/13LUvlfcsxVpfSRIg0tSnVEU4AT
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease: "easeOut" } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.4, 0, 0.2, 1] } },
 };
 
 const blockVariants = {
@@ -16,7 +16,7 @@ const blockVariants = {
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: 0.10 + i * 0.1, duration: 0.6, ease: "easeOut" },
+    transition: { delay: 0.10 + i * 0.1, duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] },
   }),
 };
 
