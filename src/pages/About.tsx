@@ -1,10 +1,30 @@
+
 import NavBar from "../components/NavBar";
 import React from "react";
-const About = () => <div className="min-h-screen bg-[#0f172a] font-sans text-white">
+import { Download } from "lucide-react";
+
+const RESUME_LINK = "https://drive.google.com/file/d/13LUvlfcsxVpfSRIg0tSnVEU4AToX71x5/view?usp=sharing";
+
+const About = () => (
+  <div className="min-h-screen bg-[#0f172a] font-sans text-white">
     <NavBar />
     <main className="pt-28 pb-14 container max-w-3xl mx-auto px-4 animate-fade-in">
       <section className="bg-card rounded-3xl shadow-xl p-8 relative">
-        <h2 className="font-display text-3xl md:text-4xl font-bold mb-6 text-primary">About Me</h2>
+        <h2 className="font-display text-3xl md:text-4xl font-bold mb-6 text-primary">
+          About Me
+        </h2>
+        {/* Resume button below About Me on mobile only */}
+        <div className="flex md:hidden justify-center mb-8">
+          <a
+            href={RESUME_LINK}
+            className="inline-flex items-center px-5 py-2 font-semibold rounded-xl bg-primary text-[#16202a] hover:bg-accent transition-colors shadow-lg text-base whitespace-nowrap animate-scale-in"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Download size={18} className="mr-2" />
+            Resume
+          </a>
+        </div>
         <p className="text-lg text-white/90 mb-6">
           Aspiring Game Designer passionate about creating immersive environments and gameplay experiences.<br />
           Moderately skilled in Unreal Engine&nbsp;5, environment art, and prototyping using Blueprint.
@@ -30,5 +50,6 @@ const About = () => <div className="min-h-screen bg-[#0f172a] font-sans text-whi
         </div>
       </section>
     </main>
-  </div>;
+  </div>
+);
 export default About;
