@@ -1,4 +1,3 @@
-
 import NavBar from "../components/NavBar";
 import ProjectCard from "../components/ProjectCard";
 import React, { useState } from "react";
@@ -23,7 +22,7 @@ const projects = [
       "Fast-paced shooter demo with player movement, shooting mechanics. Scoreboard, timer, Victory screen, and Restart button.",
     image: "/lovable-uploads/f22129ae-1956-4cd4-9d8e-61b9e0756d4a.png",
     tags: ["Prototype", "Shooter", "Blueprint", "Gameplay"],
-    video: "https://www.w3schools.com/html/movie.mp4",
+    video: "https://drive.google.com/file/d/1mM5l8gfowgtalJboxviKVF8j9cbc7pDm/preview",
   },
   {
     title: "Villager Game",
@@ -152,4 +151,3 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
-
