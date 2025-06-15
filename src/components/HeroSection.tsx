@@ -5,28 +5,30 @@ import { Link } from "react-router-dom";
 import { ArrowDown, Play } from "lucide-react";
 
 const HeroSection = () => (
-  <section className="relative flex flex-col md:flex-row items-center min-h-[60vh] pt-28 pb-10 md:pb-28 bg-[#181f36] rounded-3xl shadow-2xl overflow-hidden animate-fade-in mx-2 sm:mx-4">
-    <div className="relative flex-1 z-10 w-full md:pl-8 md:pr-4 flex flex-col items-center md:items-start">
-      <h1 className="text-3xl sm:text-4xl md:text-6xl font-display font-bold text-white leading-tight mb-6 drop-shadow-lg text-center md:text-left">
+  <section className="relative flex flex-col md:flex-row items-center min-h-[60vh] pt-24 pb-8 md:pt-28 md:pb-28 bg-[#181f36] rounded-3xl shadow-2xl overflow-hidden animate-fade-in mx-2 sm:mx-4">
+    <div className="relative flex-1 z-10 w-full md:pl-8 md:pr-4 flex flex-col items-center md:items-start px-2 sm:px-4">
+      <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-6xl font-display font-bold text-white leading-tight mb-6 drop-shadow-lg text-center md:text-left">
         Hi, I’m <span className="text-primary">Samarth Mistry</span>
         <br />
-        <span className="text-lg sm:text-xl font-sans font-semibold text-accent block mt-3">
+        <span className="text-base sm:text-lg md:text-xl font-sans font-semibold text-accent block mt-3">
           Aspiring Game Designer
         </span>
       </h1>
-      <p className="max-w-prose text-base sm:text-lg text-white/90 mb-8 text-center md:text-left leading-relaxed">
-        Passionate about crafting immersive worlds and gameplay experiences. Moderately skilled in <span className="font-semibold text-primary">Unreal Engine 5</span>, <span className="font-semibold text-primary">environment design</span>, gameplay prototyping, and C++/Blueprint scripting.
+      <p className="max-w-prose text-sm sm:text-base md:text-lg text-white/90 mb-8 text-center md:text-left leading-relaxed">
+        Passionate about crafting immersive worlds and gameplay experiences.
+        Moderately skilled in <span className="font-semibold text-primary">Unreal Engine 5</span>, <span className="font-semibold text-primary">environment design</span>,
+        gameplay prototyping, and C++/Blueprint scripting.
       </p>
-      <div className="flex flex-col sm:flex-row gap-4 items-center sm:items-start mb-6 w-full max-w-xs sm:max-w-none mx-auto sm:mx-0">
+      <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-center sm:items-start mb-6 w-full max-w-xs sm:max-w-none mx-auto sm:mx-0">
         <Link
           to="/portfolio"
-          className="w-full sm:w-fit bg-primary text-[#16202a] px-6 py-2 rounded-full font-semibold text-lg hover:bg-accent transition-colors shadow-lg animate-scale-in duration-300 text-center"
+          className="w-full sm:w-fit bg-primary text-[#16202a] px-5 py-2 rounded-full font-semibold text-base sm:text-lg hover:bg-accent transition-colors shadow-lg text-center"
         >
           View Portfolio
         </Link>
         <Link
           to="/about"
-          className="w-full sm:w-fit flex items-center justify-center gap-2 text-lg font-semibold text-primary px-4 py-2 rounded-full border border-primary/40 hover:bg-primary/10 transition-colors"
+          className="w-full sm:w-fit flex items-center justify-center gap-2 text-base sm:text-lg font-semibold text-primary px-4 py-2 rounded-full border border-primary/40 hover:bg-primary/10 transition-colors"
         >
           About Me
           <ArrowDown size={18} className="animate-bounce" />
@@ -34,14 +36,14 @@ const HeroSection = () => (
       </div>
       <a
         href="/contact"
-        className="inline-flex items-center gap-2 text-base text-accent hover:underline text-center"
+        className="inline-flex items-center gap-2 text-sm sm:text-base text-accent hover:underline text-center"
       >
         <Play size={18} />
         Let’s Connect
       </a>
     </div>
-    <div className="my-10 md:my-0 w-full flex justify-center items-end md:flex-1 md:justify-center md:items-end md:pr-8">
-      <ProfileImage className="w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 shadow-2xl animate-fade-in" />
+    <div className="my-6 md:my-0 w-full flex justify-center items-end md:flex-1 md:justify-center md:items-end md:pr-8">
+      <ProfileImage className="w-32 h-32 xs:w-40 xs:h-40 sm:w-56 sm:h-56 md:w-72 md:h-72 shadow-2xl animate-fade-in" />
     </div>
     {/* Decorative abstract SVG background, wave or blobs */}
     <svg className="absolute inset-y-0 right-0 h-full w-2/5 z-0 opacity-45 pointer-events-none" fill="none" viewBox="0 0 320 640">
