@@ -135,14 +135,25 @@ const Portfolio = () => {
             >
               ✕
             </button>
-            <video
-              src={videoUrl}
-              controls
-              autoPlay
-              className="w-full rounded-lg max-h-[70vh] bg-black my-2"
-            >
-              Your browser does not support the video tag.
-            </video>
+            {videoUrl.includes('drive.google.com') ? (
+              <iframe
+                src={videoUrl}
+                allow="autoplay"
+                allowFullScreen
+                className="w-full rounded-lg max-h-[70vh] bg-black my-2"
+                style={{ aspectRatio: '16/9', minHeight: 320 }}
+                title="Google Drive Video"
+              />
+            ) : (
+              <video
+                src={videoUrl}
+                controls
+                autoPlay
+                className="w-full rounded-lg max-h-[70vh] bg-black my-2"
+              >
+                Your browser does not support the video tag.
+              </video>
+            )}
           </div>
         </div>
       )}
