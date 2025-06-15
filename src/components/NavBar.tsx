@@ -39,7 +39,7 @@ const NavBar = () => (
         ))}
         <a
           href="https://drive.google.com/file/d/13LUvlfcsxVpfSRIg0tSnVEU4AToX71x5/view?usp=sharing"
-          className="inline-flex items-center px-3 py-2 sm:px-5 font-semibold rounded-xl bg-primary text-[#16202a] hover:bg-accent transition-colors animate-scale-in shadow-lg text-sm sm:text-base whitespace-nowrap"
+          className="mr-2 sm:mr-4 inline-flex items-center px-3 py-2 sm:px-5 font-semibold rounded-xl bg-primary text-[#16202a] hover:bg-accent transition-colors animate-scale-in shadow-lg text-sm sm:text-base whitespace-nowrap"
           target="_blank"
           rel="noopener noreferrer"
         >
