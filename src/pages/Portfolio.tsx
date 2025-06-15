@@ -1,6 +1,6 @@
 import NavBar from "../components/NavBar";
 import ProjectCard from "../components/ProjectCard";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // Import carousel components from shadcn/ui
 import {
@@ -47,6 +47,7 @@ const Portfolio = () => {
   const [videoUrl, setVideoUrl] = useState<string | null>(null);
   const [modalImages, setModalImages] = useState<string[] | null>(null);
   const [galleryIndex, setGalleryIndex] = useState(0);
+  const [carouselApi, setCarouselApi] = useState<any>(null);
 
   // Show images in gallery modal
   const handleImagesOpen = (imgs: string[]) => {
@@ -56,11 +57,29 @@ const Portfolio = () => {
   const handleImagesClose = () => {
     setModalImages(null);
     setGalleryIndex(0);
+    setCarouselApi(null);
   };
 
   // Show video in modal
   const handleVideoOpen = (url: string) => setVideoUrl(url);
   const handleVideoClose = () => setVideoUrl(null);
+
+  // Sync galleryIndex with carousel's selected index
+  useEffect(() => {
+    if (!carouselApi) return;
+    const onSelect = () => {
+      const idx = carouselApi.selectedScrollSnap();
+      setGalleryIndex(idx);
+    };
+    carouselApi.on("select", onSelect);
+
+    // Initialize selected index on modal open
+    onSelect();
+
+    return () => {
+      carouselApi.off("select", onSelect);
+    };
+  }, [carouselApi, modalImages]);
 
   return (
     <div className="min-h-screen bg-[#0f172a] font-sans text-white">
@@ -94,6 +113,7 @@ const Portfolio = () => {
                 opts={{ loop: true }}
                 className="w-full"
                 setApi={api => {
+                  setCarouselApi(api);
                   if (api) {
                     api.scrollTo(galleryIndex, true);
                   }
@@ -120,7 +140,12 @@ const Portfolio = () => {
                 {modalImages.map((_, idx) => (
                   <button
                     key={idx}
-                    onClick={() => setGalleryIndex(idx)}
+                    onClick={() => {
+                      setGalleryIndex(idx);
+                      if (carouselApi) {
+                        carouselApi.scrollTo(idx, true);
+                      }
+                    }}
                     className={`w-3 h-3 rounded-full ${galleryIndex === idx ? 'bg-accent' : 'bg-white/40'}`}
                     aria-label={`Go to image ${idx + 1}`}
                   />
