@@ -16,7 +16,8 @@ const NavBar = () => (
     <nav className="container flex items-center justify-between h-16 sm:h-20 px-2 sm:px-0 relative">
       {/* Center logo on mobile; left on md+ */}
       <div className="absolute left-1/2 top-0 transform -translate-x-1/2 h-full flex items-center md:static md:translate-x-0 md:h-auto md:flex-none">
-        <Link to="/" className="font-display text-xl sm:text-2xl text-primary tracking-widest flex items-center gap-2 py-2 md:ml-8">
+        {/* Remove md:ml-8, just apply class as on mobile/desktop */}
+        <Link to="/" className="font-display text-xl sm:text-2xl text-primary tracking-widest flex items-center gap-2 py-2">
           <span>Samarth Mistry</span>
         </Link>
       </div>
