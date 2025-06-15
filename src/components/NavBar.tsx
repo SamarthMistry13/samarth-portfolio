@@ -1,3 +1,4 @@
+
 import { Link, NavLink } from "react-router-dom";
 import { Download, Book, User, Briefcase, Mail } from "lucide-react";
 import React from "react";
@@ -13,7 +14,8 @@ const RESUME_LINK = "https://drive.google.com/file/d/13LUvlfcsxVpfSRIg0tSnVEU4AT
 
 // Make NavBar responsive for mobile: center name/logo, menu right, left-align on md+.
 const NavBar = () => (
-  <header className="fixed top-0 left-0 z-40 w-full bg-[#111827]/80 backdrop-blur border-b border-[#232a3f]">
+  <header className="fixed top-0 left-0 z-40 w-full bg-[#111827]/80 backdrop-blur border-b border-[#232a3f] hidden md:block">
+    {/* NavBar is hidden on mobile (default), visible on md+ */}
     <nav className="container flex items-center justify-between h-16 sm:h-20 px-2 sm:px-0 relative flex-col md:flex-row">
       {/* Center logo on mobile; left on md+ */}
       <div className="absolute left-1/2 top-0 transform -translate-x-1/2 h-full flex items-center md:static md:translate-x-0 md:h-auto md:flex-none">
@@ -21,18 +23,6 @@ const NavBar = () => (
           <span>Samarth Mistry</span>
         </Link>
       </div>
-      {/* REMOVE: Resume button below logo on mobile */}
-      {/* <div className="w-full flex justify-center mt-12 md:hidden">
-        <a
-          href={RESUME_LINK}
-          className="inline-flex items-center px-5 py-2 font-semibold rounded-xl bg-primary text-[#16202a] hover:bg-accent transition-colors shadow-lg text-base whitespace-nowrap"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Download size={18} className="mr-2" />
-          Resume
-        </a>
-      </div> */}
       {/* Navlinks stay right; add pl space on md+ for logo */}
       <div className="flex gap-2 sm:gap-6 items-center overflow-x-auto md:overflow-x-visible ml-auto md:ml-0 md:pl-[180px]">
         {navLinks.map(({ path, label, icon: Icon }) => (
