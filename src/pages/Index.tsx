@@ -1,3 +1,4 @@
+
 // Home page with HeroSection and quicklinks
 import NavBar from "../components/NavBar";
 import HeroSection from "../components/HeroSection";
@@ -6,8 +7,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-[#0f172a] font-sans text-white">
       <NavBar />
-      {/* Remove extra top padding on mobile, keep for md+: pt-24 md:pt-24, but no pt on mobile */}
-      <main className="pt-4 md:pt-24 pb-10 container max-w-6xl mx-auto px-2 sm:px-4">
+      {/* Increase base padding for all, and use wider container for better look on all screens */}
+      <main className="pt-4 md:pt-24 pb-10 container max-w-7xl mx-auto px-4 sm:px-8">
         <HeroSection />
       </main>
     </div>
@@ -15,3 +16,4 @@ const Index = () => {
 };
 
 export default Index;
+
