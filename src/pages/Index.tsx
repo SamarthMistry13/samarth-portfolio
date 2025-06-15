@@ -7,7 +7,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-[#0f172a] font-sans text-white">
       <NavBar />
-      <main className="pt-24 container max-w-6xl mx-auto px-4">
+      <main className="pt-24 pb-10 container max-w-6xl mx-auto px-2 sm:px-4">
         <HeroSection />
       </main>
     </div>

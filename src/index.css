@@ -6,4 +6,8 @@
 body {
   font-family: "Inter", sans-serif;
   background: #0f172a;
+  padding-left: 0;
+  padding-right: 0;
+  /* Remove default margin & padding for mobile-friendly sizing */
+  margin: 0;
 }
