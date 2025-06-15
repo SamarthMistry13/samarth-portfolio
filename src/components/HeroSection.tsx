@@ -1,4 +1,3 @@
-
 import React from "react";
 import ProfileImage from "./ProfileImage";
 import { Link } from "react-router-dom";
@@ -6,7 +5,8 @@ import { Home } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="w-full bg-[#131b2e] rounded-3xl shadow-2xl px-6 py-10 sm:p-12 max-w-4xl mx-auto mt-7 animate-fade-in border border-[#273862]">
+    // Tweak top margin for mobile; keep mt-7 on md+ only
+    <section className="w-full bg-[#131b2e] rounded-3xl shadow-2xl px-6 py-10 sm:p-12 max-w-4xl mx-auto mt-2 md:mt-7 animate-fade-in border border-[#273862]">
       <div className="flex flex-col md:flex-row items-center md:items-start md:gap-12 gap-7">
         {/* Profile image left side */}
         <div className="w-[160px] h-[160px] shrink-0 mx-auto md:mx-0 mb-4 md:mb-0">
@@ -64,4 +64,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-
