@@ -29,7 +29,7 @@ const projects = [
     description:
       "Stylized top-down game with coin collection, player animation, sound, enemy AI, and sliding mechanic.",
     image: "/lovable-uploads/e61a9389-08f8-4e45-9158-0b8c7ebad45d.png",
-    tags: ["Blueprint", "Top-down", "Gameplay", "Enemy AI"],
+    tags: ["Blueprint", "Gameplay", "Enemy AI", "Sound Effects", "Player Animation"],
     video: "https://drive.google.com/file/d/1MPy2P1GFL5fDN9CTMjd3vosZBzf94_8o/preview",
   },
 ];
