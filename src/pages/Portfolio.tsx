@@ -21,7 +21,7 @@ const projects = [
     description:
       "Fast-paced shooter demo with player movement, shooting mechanics. Scoreboard, timer, Victory screen, and Restart button.",
     image: "/lovable-uploads/f22129ae-1956-4cd4-9d8e-61b9e0756d4a.png",
-    tags: ["Prototype", "Shooter", "Blueprint", "Gameplay"],
+    tags: ["Prototype", "Shooter", "Blueprint", "Gameplay", "Chos Physics"],
     video: "https://drive.google.com/file/d/1mM5l8gfowgtalJboxviKVF8j9cbc7pDm/preview",
   },
   {
