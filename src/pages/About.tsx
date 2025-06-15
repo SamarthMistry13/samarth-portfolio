@@ -8,7 +8,7 @@ const RESUME_LINK = "https://drive.google.com/file/d/13LUvlfcsxVpfSRIg0tSnVEU4AT
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.4, 0, 0.2, 1] } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease: "easeOut" } },
 };
 
 const blockVariants = {
@@ -16,7 +16,7 @@ const blockVariants = {
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: 0.10 + i * 0.1, duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] },
+    transition: { delay: 0.10 + i * 0.1, duration: 0.6, ease: "easeOut" },
   }),
 };
 
@@ -77,7 +77,7 @@ const About = () => (
             <h3 className="font-semibold text-xl mb-3 text-accent">Education</h3>
             <ul className="list-disc list-inside space-y-2 text-white/90">
               <li>Completed 12th grade</li>
-              <li>Pursuing B.Tech </li>
+              <li>Pursuing B.Tech </li>
             </ul>
           </div>
           <div className="flex-1 bg-white/5 rounded-2xl p-5 shadow-sm border border-primary/10">
