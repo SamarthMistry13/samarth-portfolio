@@ -95,20 +95,21 @@ const Portfolio = () => {
                 className="w-full"
                 setApi={api => {
                   if (api) {
-                    api.scrollTo(galleryIndex, true, undefined, true);
+                    api.scrollTo(galleryIndex, true);
                   }
                 }}
               >
                 <CarouselContent>
                   {modalImages.map((img, idx) => (
                     <CarouselItem key={img} className="flex items-center justify-center">
-                      <img
-                        src={img}
-                        alt={`Portfolio gallery ${idx + 1}`}
-                        className="max-h-[38vh] md:max-h-[52vh] rounded-lg shadow-lg object-contain mx-auto"
-                        style={{ maxWidth: "70vw" }}
-                        draggable={false}
-                      />
+                      <div className="flex items-center justify-center w-full bg-black/10 rounded-lg" style={{ minHeight: "280px" }}>
+                        <img
+                          src={img}
+                          alt={`Portfolio gallery ${idx + 1}`}
+                          className="w-auto h-auto max-h-[60vh] md:max-h-[80vh] max-w-full rounded-lg shadow-lg object-contain"
+                          draggable={false}
+                        />
+                      </div>
                     </CarouselItem>
                   ))}
                 </CarouselContent>
