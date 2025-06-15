@@ -66,7 +66,7 @@ const Portfolio = () => {
   const handleVideoClose = () => setVideoUrl(null);
 
   // Sync galleryIndex with carousel's selected index
-  useEffect(() => {
+  React.useEffect(() => {
     if (!carouselApi) return;
     const onSelect = () => {
       const idx = carouselApi.selectedScrollSnap();
@@ -85,7 +85,7 @@ const Portfolio = () => {
   return (
     <div className="min-h-screen bg-[#0f172a] font-sans text-white">
       <NavBar />
-      <main className="pt-4 md:pt-28 pb-14 container max-w-6xl mx-auto px-4">
+      <main className="pt-3 md:pt-28 pb-14 container max-w-6xl mx-auto px-4">
         <h2 className="font-display text-3xl md:text-4xl font-bold mb-10 text-primary">Portfolio</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, i) => (
@@ -194,4 +194,3 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
-

@@ -8,7 +8,7 @@ const RESUME_LINK = "https://drive.google.com/file/d/13LUvlfcsxVpfSRIg0tSnVEU4AT
 const About = () => (
   <div className="min-h-screen bg-[#0f172a] font-sans text-white">
     <NavBar />
-    <main className="pt-0 md:pt-28 pb-14 container max-w-3xl mx-auto px-4 animate-fade-in">
+    <main className="pt-3 md:pt-28 pb-14 container max-w-3xl mx-auto px-4 animate-fade-in">
       <section className="bg-card rounded-3xl shadow-xl p-8 relative">
         <h2 className="font-display text-3xl md:text-4xl font-bold mb-6 text-primary">
           About Me
